@@ -64,6 +64,9 @@ export default function Depoimentos() {
                 >
                     Depoimentos
                 </Typography>
+                <Typography>
+                    Capturas de tela de conversas e feedbacks de clientes satisfeitos.
+                </Typography>
                 <Box width="100%">
                     <ImageGallery
                         autoPlay

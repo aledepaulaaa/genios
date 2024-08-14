@@ -4,6 +4,7 @@ import HomeView from "@/views/home/HomeView"
 import Sobre from "@/views/home/Sobre"
 import Depoimentos from "@/views/home/Depoimentos"
 import Garantias from "@/views/home/Garantias"
+import AntiPlagio from "@/views/home/AntiPlagio"
 
 export default function Home() {
     return (
@@ -26,6 +27,7 @@ export default function Home() {
                 <HomeView />
                 <Garantias />
                 <Depoimentos />
+                <AntiPlagio />
                 <Sobre />
             </Grid>
         </Grid>

@@ -2,7 +2,7 @@ import React from "react"
 import Image from "next/image"
 import { Space_Mono } from "next/font/google"
 import { ETAPAS_GARANTIAS } from "@/@core/data/etapasGarantias"
-import ImagemMulher from "../assets/img/garantias/woman_01.png"
+import ImagemMulher from "../assets/img/garantias/woman_1.png"
 import { Box, Button, Grid, Paper, Step, StepContent, StepLabel, Stepper, Typography } from "@mui/material"
 
 const spaceMono = Space_Mono({ weight: "700", subsets: ["latin"] })
@@ -50,8 +50,15 @@ export default function Garantias() {
                     Como funcionam as garantias?
                     <br />Siga as etapas abaixo
                 </Typography>
-                <Grid item xs={12} display="flex" flexDirection={{ xs: "column", md: "row" }}>
-                    <Grid item xs={12} md={6}>
+                <Grid
+                    item
+                    xs={12}
+                    display="flex"
+                    justifyContent="center"
+                    alignItems="center"
+                    flexDirection={{ xs: "column", md: "row" }}
+                >
+                    <Grid item xs={12} md={8}>
                         <Stepper activeStep={activeStep} orientation="vertical" sx={{ p: 2 }}>
                             {ETAPAS_GARANTIAS.map((step, index) => (
                                 <Step key={step.label}>
@@ -94,12 +101,12 @@ export default function Garantias() {
                         )}
                     </Grid>
                     <Grid item xs={12} md={6}>
-                        <Image 
+                        <Image
                             src={ImagemMulher}
                             alt="Imagem de uma Mulher Afirmando garantia com o polegar"
                             width={300}
                             height={300}
-                            style={{ width: "100%", height: "100%" }}
+                            style={{ width: "350px", height: "auto" }}
                         />
                     </Grid>
                 </Grid>

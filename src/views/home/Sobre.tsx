@@ -44,7 +44,7 @@ export default function Sobre() {
                         sx={{
                             borderRadius: 2,
                             textAlign: "center",
-                            color: "white",
+                            color: "black",
                         }}
                     >
                         Sobre nós
@@ -60,7 +60,6 @@ export default function Sobre() {
                         variant="contained"
                         endIcon={<WhatsAppIcon />}
                         sx={{
-                            width: "50%",
                             mt: 2,
                             p: 2,
                             color: "white",
@@ -77,31 +76,12 @@ export default function Sobre() {
                     </Button>
                 </Grid>
                 <Grid item xs={12} p={2} md={6}>
-                    <Typography variant="body1" color="white">
+                    <Typography variant="body1" color="black">
                         Na Gênios Acadêmicos, nossa missão é transformar o seu percurso acadêmico em uma experiência tranquila e bem-sucedida.
                         Somos uma plataforma especializada em oferecer suporte completo para a realização de trabalhos acadêmicos,
-                        desde a elaboração de <span
-                            style={{
-                                color: "black",
-                                marginLeft: 5,
-                                marginRight: 5,
-                                fontWeight: "bold"
-                            }}
-                        >
-                            TCCs, artigos, resumos,
-                        </span> até o acompanhamento em estágios e outros projetos.
+                        desde a elaboração de <b>TCCs, artigos, resumos,</b> até o acompanhamento em estágios e outros projetos.
                         Com uma equipe de profissionais experientes e altamente qualificados,
-                        já concluímos mais de
-                        <span
-                            style={{
-                                color: "black",
-                                marginLeft: 5,
-                                marginRight: 5,
-                                fontWeight: "bold"
-                            }}
-                        >
-                            2000 trabalhos
-                        </span>, e entendemos as exigências do meio acadêmico e
+                        já concluímos mais de <b>2000 trabalhos</b>, e entendemos as exigências do meio acadêmico e
                         nos comprometemos a entregar resultados que superam as expectativas, sempre respeitando prazos e
                         garantindo a originalidade e a qualidade de cada trabalho.
                         Acreditamos que o seu tempo é precioso, e por isso, oferecemos um serviço personalizado e dedicado,
