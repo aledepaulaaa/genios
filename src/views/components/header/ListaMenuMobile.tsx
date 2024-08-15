@@ -66,7 +66,7 @@ export default function ListaMenuMobile() {
                                 <Button
                                     variant="contained"
                                     endIcon={<SendIcon />}
-                                    onClick={() => router.push(`/#${item.id}`)}
+                                    onClick={() => router.push(`${item.link}`)}
                                     sx={{
                                         width: { xs: "80%", md: "auto" },
                                         backgroundColor: "transparent",

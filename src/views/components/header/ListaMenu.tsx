@@ -2,10 +2,11 @@ import SendIcon from "@mui/icons-material/Send"
 import LogoV1 from "../../assets/LOGOTIPO.png"
 import Image from "next/image"
 import { LISTA_MENU } from "@/interfaces/IListaMenu"
-import { Button, Grid, List, ListItem, ListItemText, Typography } from "@mui/material"
 import router from "next/router"
+import { Button, Grid, List, ListItem, ListItemText, Typography } from "@mui/material"
 
 export default function ListaMenu() {
+
     return (
         <Grid container spacing={2}>
             <Grid item xs={12} display="flex" justifyContent="space-around" alignItems="center" width="100%">
@@ -23,7 +24,7 @@ export default function ListaMenu() {
                                 <Button
                                     variant="contained"
                                     endIcon={<SendIcon />}
-                                    onClick={() => router.push(`/#${item.id}`)}
+                                    onClick={() => router.push(`${item.link}`)}
                                     sx={{
                                         width: { xs: "100%", md: "auto" },
                                         color: "black",

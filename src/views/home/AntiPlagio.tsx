@@ -21,7 +21,7 @@ export default function AntiPlagio() {
                     Garantimos a segurança <br />em seus projetos com
                     nosso sistema
                 </Typography>
-                <Typography width="50%" mt={2} textAlign="center">
+                <Typography p={2} mt={2} textAlign="justify">
                     Para garantir a originalidade dos trabalhos, utilizamos o
                     <span
                         style={{

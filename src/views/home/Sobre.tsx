@@ -7,6 +7,10 @@ import { Button, Grid, Typography } from "@mui/material"
 const spaceMono = Space_Mono({ weight: "700", subsets: ["latin"] })
 
 export default function Sobre() {
+    const handleSendWhatsapp = () => {
+        window.open("https://wa.me/5516996293211")
+    }
+
     return (
         <Grid
             id="sobre"
@@ -59,6 +63,7 @@ export default function Sobre() {
                     <Button
                         variant="contained"
                         endIcon={<WhatsAppIcon />}
+                        onClick={handleSendWhatsapp}
                         sx={{
                             mt: 2,
                             p: 2,
@@ -76,7 +81,7 @@ export default function Sobre() {
                     </Button>
                 </Grid>
                 <Grid item xs={12} p={2} md={6}>
-                    <Typography variant="body1" color="black">
+                    <Typography variant="body1" textAlign="justify" color="black">
                         Na Gênios Acadêmicos, nossa missão é transformar o seu percurso acadêmico em uma experiência tranquila e bem-sucedida.
                         Somos uma plataforma especializada em oferecer suporte completo para a realização de trabalhos acadêmicos,
                         desde a elaboração de <b>TCCs, artigos, resumos,</b> até o acompanhamento em estágios e outros projetos.

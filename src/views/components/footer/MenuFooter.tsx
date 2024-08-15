@@ -1,21 +1,29 @@
 import Image from "next/image"
+import router from "next/router"
 import logoGenios from "../../assets/img/illustration_principal.png"
-import { Grid, List, ListItem, ListItemText, Typography } from "@mui/material"
 import InstagramIcon from "@mui/icons-material/Instagram"
 import WhatsAppIcon from "@mui/icons-material/WhatsApp"
 import { LISTA_MENU } from "@/interfaces/IListaMenu"
-import router from "next/router"
+import { Grid, List, ListItem, ListItemText, Typography } from "@mui/material"
 
 export default function MenuFooter() {
+    const handleSendWhatsapp = () => {
+        window.open("https://wa.me/5516996293211")
+    }
+
+    const handleOpenInstagram = () => {
+        window.open("https://www.instagram.com/geniosacademicos_?igsh=MWhpNWp3cnZzYzkxbA%3D%3D&utm_source=qr")
+    }
+
     return (
         <Grid container spacing={2}>
             <Grid
                 item
                 xs={12}
                 mt={4}
-                gap={4}
+                p={2}
+                gap={2}
                 display="flex"
-                justifyContent="center"
                 flexDirection={{ xs: "column", md: "row" }}
             >
                 <Grid item xs={12} md={6} p={2}>
@@ -25,6 +33,7 @@ export default function MenuFooter() {
                         width={400}
                         height={400}
                         style={{ width: "100%", height: "auto" }}
+                        priority
                     />
                 </Grid>
                 <Grid item xs={12} md={4} display="flex" alignItems="center" flexDirection="column">
@@ -33,7 +42,7 @@ export default function MenuFooter() {
                     </Typography>
                     <List>
                         {LISTA_MENU.map((item) => (
-                            <ListItem id={item.id}>
+                            <ListItem key={item.id} sx={{ textAlign: "center"}}>
                                 <ListItemText
                                     primary={
                                         <Typography
@@ -60,17 +69,31 @@ export default function MenuFooter() {
                         email@contato.com
                     </Typography>
                 </Grid>
-                <Grid item xs={12} display="flex" alignItems="center" flexDirection="column">
+                <Grid item xs={12} md={4} display="flex" alignItems="center" flexDirection="column">
                     <Typography fontWeight="bold">
                         Redes Sociais
                     </Typography>
                     <Grid item xs={12} gap={2} display="flex">
-                        <InstagramIcon sx={{ cursor: "pointer", width: 32, height: 32 }} />
-                        <WhatsAppIcon sx={{ cursor: "pointer", width: 32, height: 32  }} />
+                        <InstagramIcon
+                            onClick={handleOpenInstagram}
+                            sx={{
+                                cursor: "pointer",
+                                width: 32,
+                                height: 32
+                            }}
+                        />
+                        <WhatsAppIcon
+                            onClick={handleSendWhatsapp}
+                            sx={{
+                                cursor: "pointer",
+                                width: 32,
+                                height: 32
+                            }}
+                        />
                     </Grid>
                 </Grid>
-                <Grid item xs={12} md={4} mb={2}display="flex" alignItems="center" flexDirection="column">
-                    <Typography fontWeight="bold">
+                <Grid item xs={12} md={4} mb={2} display="flex" alignItems="center" flexDirection="column">
+                    <Typography fontWeight="bold" textAlign="center">
                         Política de Privacidade
                     </Typography>
                     <Typography variant="caption" sx={{ cursor: "pointer" }} onClick={() => router.push("/politica")}>

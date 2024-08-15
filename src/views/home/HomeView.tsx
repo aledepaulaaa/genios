@@ -8,8 +8,12 @@ const spaceMono = Space_Mono({ weight: "700", subsets: ["latin"] })
 export default function HomeView() {
     const isMobile = useMediaQuery("(max-width: 1024px)")
 
+    const handleSendWhatsapp = () => {
+        window.open("https://wa.me/5516996293211")
+    }
+
     return (
-        <Grid container spacing={2}>
+        <Grid container spacing={2} id="home">
             <Grid
                 item
                 xs={12}
@@ -27,7 +31,7 @@ export default function HomeView() {
                     >
                         Precisando de suporte com seu projeto?
                     </Typography>
-                    <Typography mt={4} sx={{ textAlign: isMobile ? "center" : "left" }} variant="body2">
+                    <Typography mt={4} p={2} textAlign="justify" variant="body2">
                         Nossa equipe de especialistas está pronta para ajudar você a alcançar
                         o sucesso acadêmico. Confie em nós para entregar trabalhos de
                         alta qualidade, personalizados, dentro dos prazos e, o melhor de tudo, sem plágio!
@@ -35,6 +39,7 @@ export default function HomeView() {
                     <Button
                         variant="contained"
                         endIcon={<WhatsAppIcon />}
+                        onClick={handleSendWhatsapp}
                         sx={{
                             mt: 2,
                             p: 2,

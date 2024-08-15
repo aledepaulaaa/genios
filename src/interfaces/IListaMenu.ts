@@ -2,6 +2,7 @@
 export interface IListaMenu {
     item: string
     id: string
+    link?: string
 }
 
 export const LISTA_MENU: IListaMenu[] = [
@@ -24,5 +25,6 @@ export const LISTA_MENU: IListaMenu[] = [
     {
         item: "Contato",
         id: "contato",
+        link: "https://wa.me/5516996293211"
     }
 ]
