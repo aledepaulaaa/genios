@@ -58,7 +58,7 @@ export default function MenuFooter() {
                         ))}
                     </List>
                 </Grid>
-                <Grid item xs={12} gap={2} md={4} display="flex" alignItems="center" flexDirection="column">
+                {/* <Grid item xs={12} gap={2} md={4} display="flex" alignItems="center" flexDirection="column">
                     <Typography fontWeight="bold">
                         Contato
                     </Typography>
@@ -68,8 +68,8 @@ export default function MenuFooter() {
                     <Typography variant="caption">
                         email@contato.com
                     </Typography>
-                </Grid>
-                <Grid item xs={12} md={4} display="flex" alignItems="center" flexDirection="column">
+                </Grid> */}
+                <Grid item xs={12} md={6} display="flex" alignItems="center" flexDirection="column">
                     <Typography fontWeight="bold">
                         Redes Sociais
                     </Typography>
