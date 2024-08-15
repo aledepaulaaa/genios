@@ -1,14 +1,17 @@
+import React from "react"
 import Image from "next/image"
 import SendIcon from "@mui/icons-material/Send"
 import ilustracao from "../assets/illustration_svg.svg"
 import useFormularioContato from "@/@core/hooks/useFormularioContato"
 import { Alert, Button, FormControl, Grid, MenuItem, Select, TextField, Typography } from "@mui/material"
-import React from "react"
 
 export default function FormularioContato() {
     const { emaildata, setEmailData, success, handleSendEmail } = useFormularioContato()
-
     const [showOtherField, setShowOtherField] = React.useState(false)
+
+    const handleSendWhatsapp = () => {
+        window.open("https://wa.me/5516996293211")
+    }
 
     const handleSelectChange = (e: any) => {
         const value = e.target.value
@@ -18,7 +21,7 @@ export default function FormularioContato() {
             setShowOtherField(true)
         } else {
             setShowOtherField(false)
-            setEmailData({ ...emaildata, tipoProjeto: "" }) // Reseta o campo "Outro" caso seja ocultado
+            setEmailData({ ...emaildata, tipoProjeto: "" })
         }
     }
 
@@ -92,7 +95,7 @@ export default function FormularioContato() {
                         endIcon={<SendIcon />}
                         variant="contained"
                         fullWidth
-                        onClick={handleSendEmail}
+                        onClick={handleSendWhatsapp}
                         sx={{
                             color: "white",
                             mt: 2,
