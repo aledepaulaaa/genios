@@ -17,9 +17,9 @@ export default function Home() {
             flexDirection="column"
         >
             <Head>
-                <title>Gênios Acadêmicos - Nós temos a Solução!</title>
-                <meta name="description" content="Descrição para editar" />
-                <meta name="keywords" content="palavras-chave, para, editar" />
+                <title>Gênios Acadêmicos | Serviços acadêmicos especializados</title>
+                <meta name="description" content="Serviços acadêmicos especializados em TCC, monografias, artigos científicos, projetos de pesquisa, e muito mais." />
+                <meta name="keywords" content="TCC, trabalhos acadêmicos, monografias, artigos científicos, projetos de pesquisa, estágios acadêmicos, consultoria acadêmica, revisão de textos, formatação ABNT, orientação acadêmica, redação de trabalhos, dissertações, teses, metodologia científica, planejamento de pesquisa, suporte acadêmico, escrita acadêmica, revisão bibliográfica, normalização de trabalhos, produção acadêmica" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
