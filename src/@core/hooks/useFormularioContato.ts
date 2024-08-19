@@ -11,12 +11,20 @@ export default function useFormularioContato() {
         setLoading(true)
         try {
 
-            if (success) {
+            const response = await fetch("/api/enviaremail", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(emaildata),
+            })
+
+            if (response.ok) {
+                console.log("Email enviado com sucesso!")
                 setSuccess(true)
             } else {
-                setError(true)
+                console.log("Erro ao enviar o email, tente novamente")
             }
-
         } catch (error) {
             setError(true)
             console.error("Erro ao enviar e-mail, tente novamente.")

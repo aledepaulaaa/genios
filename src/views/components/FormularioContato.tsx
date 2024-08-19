@@ -6,12 +6,12 @@ import useFormularioContato from "@/@core/hooks/useFormularioContato"
 import { Alert, Button, FormControl, Grid, MenuItem, Select, TextField, Typography } from "@mui/material"
 
 export default function FormularioContato() {
-    const { emaildata, setEmailData, success, handleSendEmail } = useFormularioContato()
     const [showOtherField, setShowOtherField] = React.useState(false)
+    const { emaildata, setEmailData, success, handleSendEmail } = useFormularioContato()
 
-    const handleSendWhatsapp = () => {
-        window.open("https://wa.me/5516996293211")
-    }
+    // const handleSendWhatsapp = () => {
+    //     window.open("https://wa.me/5516996293211")
+    // }
 
     const handleSelectChange = (e: any) => {
         const value = e.target.value
@@ -21,7 +21,6 @@ export default function FormularioContato() {
             setShowOtherField(true)
         } else {
             setShowOtherField(false)
-            setEmailData({ ...emaildata, tipoProjeto: "" })
         }
     }
 
@@ -58,10 +57,10 @@ export default function FormularioContato() {
                     />
                     <TextField
                         fullWidth
+                        required
                         label="Telefone | WhatsApp"
                         variant="outlined"
                         placeholder="(00) 00000-0000"
-                        required
                         value={emaildata.telefone}
                         onChange={(e) => setEmailData({ ...emaildata, telefone: e.target.value })}
                     />
@@ -73,12 +72,12 @@ export default function FormularioContato() {
                         value={emaildata.tipoProjeto}
                         onChange={handleSelectChange}
                     >
-                        <MenuItem value={10}>TCC</MenuItem>
-                        <MenuItem value={20}>Trabalho Acadêmico</MenuItem>
-                        <MenuItem value={30}>Artigo</MenuItem>
-                        <MenuItem value={40}>Estágio</MenuItem>
-                        <MenuItem value={50}>Projetos</MenuItem>
-                        <MenuItem value={60}>Monografia</MenuItem>
+                        <MenuItem value="TCC">TCC</MenuItem>
+                        <MenuItem value="Trabalho Académico">Trabalho Acadêmico</MenuItem>
+                        <MenuItem value="Artigo">Artigo</MenuItem>
+                        <MenuItem value="Estagio">Estágio</MenuItem>
+                        <MenuItem value="Projeto">Projetos</MenuItem>
+                        <MenuItem value="Monografia">Monografia</MenuItem>
                         <MenuItem value="Outros">Outros</MenuItem>
                     </Select>
                     {showOtherField && (
@@ -95,7 +94,7 @@ export default function FormularioContato() {
                         endIcon={<SendIcon />}
                         variant="contained"
                         fullWidth
-                        onClick={handleSendWhatsapp}
+                        onClick={handleSendEmail}
                         sx={{
                             color: "white",
                             mt: 2,

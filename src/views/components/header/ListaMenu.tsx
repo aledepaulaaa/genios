@@ -15,7 +15,7 @@ export default function ListaMenu() {
                     alt="logo"
                     width={100}
                     height={100}
-                    style={{ cursor: "pointer", width: 120, height: 65 }}
+                    style={{ cursor: "pointer", width: 120, height: "auto" }}
                 />
                 <List sx={{ display: "flex", width: "50%" }}>
                     {LISTA_MENU.map((item) => (

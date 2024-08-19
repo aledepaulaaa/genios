@@ -33,7 +33,6 @@ export default function MenuFooter() {
                         width={400}
                         height={400}
                         style={{ width: "100%", height: "auto" }}
-                        priority
                     />
                 </Grid>
                 <Grid item xs={12} md={4} display="flex" alignItems="center" flexDirection="column">

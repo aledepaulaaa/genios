@@ -40,7 +40,7 @@ export default function ListaMenuMobile() {
                 style={{
                     cursor: "pointer",
                     width: 100,
-                    height: 65,
+                    height: "auto",
                     marginLeft: 20
                 }}
             />
