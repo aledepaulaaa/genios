@@ -3,7 +3,7 @@
   
   # 🌟 Gênios Acadêmicos 🌟
 
-  **🚀 Site oficial para serviços acadêmicos, como TCC's, estágios, artigos, projetos e muito mais!**
+  **🚀 Repositório do Site oficial para serviços acadêmicos, como TCC's, estágios, artigos, projetos e muito mais!**
 
   <a href="https://www.geniosacademicos.com.br/">Visite o site 🌐</a> | <a href="https://github.com/aledepaulaaa/genios">Veja o repositório GitHub 📂</a>
 </div>
