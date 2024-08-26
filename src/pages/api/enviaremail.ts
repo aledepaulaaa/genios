@@ -5,8 +5,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (req.method === 'POST') {
         const { email, nome, telefone, tipoProjeto } = req.body
 
-        console.log("Dados do email recebidos no backend:", { email, nome, telefone, tipoProjeto })
-
         const transporter = nodemailer.createTransport({
             host: "smtp.titan.email",
             port: 465,
@@ -25,10 +23,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 text: `Nome: ${nome}\nEmail: ${email}\nTelefone: ${telefone}\nTipo de Projeto: ${tipoProjeto}`,
             }
 
-            console.log("Enviando email para:", enviarEmail.to)
-
             const info = await transporter.sendMail(enviarEmail)
-            console.log("Email enviado: %s", info.messageId)
             res.status(200).json({ success: true })
         } catch (error) {
             console.error("Erro ao enviar e-mail:", error)
