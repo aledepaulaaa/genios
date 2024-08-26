@@ -7,12 +7,10 @@ import depoimento1 from "../assets/img/depoimentos/depoimentos_01.jpeg"
 import depoimento2 from "../assets/img/depoimentos/depoimentos_02.jpeg"
 import depoimento3 from "../assets/img/depoimentos/depoimentos_03.jpeg"
 import depoimento4 from "../assets/img/depoimentos/depoimentos_04.png"
-import depoimento5 from "../assets/img/depoimentos/depoimentos_05.png"
-import depoimento6 from "../assets/img/depoimentos/depoimentos_06.png"
-import depoimento7 from "../assets/img/depoimentos/depoimentos_07.png"
-import depoimento8 from "../assets/img/depoimentos/depoimentos_08.png"
-import depoimento9 from "../assets/img/depoimentos/depoimentos_09.png"
-import depoimento10 from "../assets/img/depoimentos/depoimentos_10.png"
+import depoimento5 from "../assets/img/depoimentos/depoimentos_05.jpg"
+import depoimento6 from "../assets/img/depoimentos/depoimentos_06.jpg"
+import depoimento7 from "../assets/img/depoimentos/depoimentos_07.jpg"
+import depoimento8 from "../assets/img/depoimentos/depoimentos_08.jpg"
 
 const spaceMono = Space_Mono({ weight: "700", subsets: ["latin"] })
 
@@ -56,12 +54,6 @@ export default function Depoimentos() {
         {
             original: depoimento8.src,
         },
-        {
-            original: depoimento9.src,
-        },
-        {
-            original: depoimento10.src,
-        }
     ]
 
     return (

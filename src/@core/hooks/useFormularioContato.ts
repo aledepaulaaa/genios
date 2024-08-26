@@ -10,7 +10,6 @@ export default function useFormularioContato() {
     const handleSendEmail = async () => {
         setLoading(true)
         try {
-
             const response = await fetch("/api/enviaremail", {
                 method: "POST",
                 headers: {
