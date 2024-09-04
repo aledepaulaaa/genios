@@ -3,15 +3,11 @@ import Image from "next/image"
 import SendIcon from "@mui/icons-material/Send"
 import ilustracao from "../assets/illustration_svg.svg"
 import useFormularioContato from "@/@core/hooks/useFormularioContato"
-import { Alert, Button, FormControl, Grid, MenuItem, Select, TextField, Typography } from "@mui/material"
+import { Alert, Button, CircularProgress, FormControl, Grid, MenuItem, Select, TextField, Typography } from "@mui/material"
 
 export default function FormularioContato() {
     const [showOtherField, setShowOtherField] = React.useState(false)
-    const { emaildata, setEmailData, success, handleSendEmail } = useFormularioContato()
-
-    // const handleSendWhatsapp = () => {
-    //     window.open("https://wa.me/5516996293211")
-    // }
+    const { emaildata, setEmailData, loading, error, success, handleSendEmail } = useFormularioContato()
 
     const handleSelectChange = (e: any) => {
         const value = e.target.value
@@ -94,6 +90,7 @@ export default function FormularioContato() {
                         endIcon={<SendIcon />}
                         variant="contained"
                         fullWidth
+                        disabled={loading}
                         onClick={handleSendEmail}
                         sx={{
                             color: "white",
@@ -108,12 +105,19 @@ export default function FormularioContato() {
                             }
                         }}
                     >
-                        Enviar
+                        {loading ? <CircularProgress /> : "Enviar"}
                     </Button>
                     {success && (
                         <Alert severity="success" sx={{ mt: 2, alignItems: "center" }}>
                             <Typography fontWeight="bold">
                                 Email enviado com sucesso!
+                            </Typography>
+                        </Alert>
+                    )}
+                    {error && (
+                        <Alert severity="error" sx={{ mt: 2, alignItems: "center" }}>
+                            <Typography fontWeight="bold">
+                                {error}
                             </Typography>
                         </Alert>
                     )}

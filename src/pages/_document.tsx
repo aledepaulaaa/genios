@@ -16,6 +16,22 @@ export default function Document() {
             `,
           }}
         />
+        {/* Snippet de evento (para a página de conversão) */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              gtag('event', 'conversion', {
+                'send_to': 'AW-878522760/5yqGCL6WwXkDEK7h3eID',
+                'value': 0,
+                'currency': 'BRL',
+                'event_callback': function () {
+                  console.log('conversion event was fired');
+                }
+              });
+            `
+          }}
+        >
+        </script>
       </Head>
       <body
         style={{
