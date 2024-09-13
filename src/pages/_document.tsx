@@ -32,6 +32,18 @@ export default function Document() {
           }}
         >
         </script>
+        {/* Tag para acompanhamento de conversão */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || []; function gtag()
+              {dataLayer.push(arguments);} gtag('js', new Date());
+              gtag('config', 'AW-878522760');
+            `
+          }}
+        >
+
+        </script>
       </Head>
       <body
         style={{
